@@ -1,0 +1,412 @@
+:root{
+    
+    --primary-color: #26c0ab;
+    
+
+    --dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-cyan: hsl(185, 41%, 84%);
+    --very-light-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+
+    --body-fs: 1.5em;
+
+    --primary-font:'Space Mono', monospace;
+    --fw-700: 700;
+
+    --size-100: 1em;
+
+}
+
+/* Utility Classes */
+
+.bg-color{
+    background-color: var(--light-cyan);
+}
+
+.body-fs{
+    font-size: var(--body-fs);
+}
+
+.primary-font{
+    font-family: var(--primary-font);
+}
+
+.fw-700{
+    font-weight: 700;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.container{
+    --max-width: 1110px;
+    --padding: 1rem;
+  
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+}
+
+.padding-block-50{
+    padding-block: .5em;
+}
+
+.padding-block-100{
+    padding-block: 1em;
+}
+
+
+.padding-block-200{
+    padding-block: 2em;
+}
+
+.header-font{
+    font-size: .85em;
+    color: var(--dark-grayish-cyan);
+}
+
+.error-font{
+    font-size: .85em;
+    color: lightcoral;
+    float: right;
+    padding-top: .4em;
+}
+
+.right-header-text{
+    font-size: .65em;
+    color: var(--white);
+
+}
+
+.sub-header{
+    font-weight: 200;
+    color:hsl(184, 14%, 56%);
+    font-size: .55em;
+}
+
+
+.visually-hidden{
+    position: absolute;
+    position: absolute ;
+    width: 1px ;
+    height: 1px ;
+    padding: 0 ;
+    margin: -1px ;
+    overflow: hidden ;
+    clip: rect(0,0,0,0) ;
+    white-space: nowrap ;
+    border: 0 ;
+}
+
+.visually-show{
+    display: block;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+html,
+body{
+    height: 100%;
+}
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+svg,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* General Styling */
+
+.container-logo{
+    display: grid;
+    justify-content: center;
+    margin-top: 6em;
+    margin-bottom: 2em;
+}
+
+main{
+    display: grid;
+    justify-content: center;
+}
+
+.main-box{
+    background-color: var(--white);
+    width: 45em;
+    border-radius: 15px;
+}
+
+.main-box-grid{
+    display: grid;
+    grid-auto-flow: column;
+    padding-block: 1.5em;
+    gap: 1em;
+}
+
+.bill-form{
+    display: flex;
+    flex-direction: row;
+}
+
+.bill-form, .people-form{
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.right-box{
+    background-color: var(--dark-cyan);
+    border-radius: 5px;
+    margin-left: -6.3em;
+    padding: 1rem;
+}
+
+.left-box{
+    padding: 1em;
+    width: 77%;
+}
+
+
+#bill-input, #num-people{
+    border: none;
+    background-color: var(--very-light-cyan);
+    height: 2em;
+    border-radius: 5px;
+    margin-top: .5em;
+    border-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.money-svg{
+    position: absolute;
+    margin-top: 1.85em;
+    margin-left: .5em;
+}
+
+.person-svg{
+    position: absolute;
+    margin-top: 2.5em;
+    margin-left: .5em;
+}
+
+
+#bill-input::placeholder, #num-people::placeholder{
+    float: right;
+    margin-right: 1em;
+}
+
+input[type=text]{
+    text-align: right;
+    color: var(--dark-cyan);
+    padding-right: 1em;
+}
+
+
+
+
+.container-right-box{
+    --max-width: 1110px;
+    --padding: 1em;
+    
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+}
+
+.tip-box-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: .5em;
+}
+
+.tip-box{
+    width: 5em;
+    height: 1.8em;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    text-align: center;
+    border-radius: 2px;
+    border: none;
+    transition: .3s;
+}
+
+
+
+.tip-box:hover, .tip-box-custom input:hover{
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--dark-cyan);
+}
+
+
+
+
+.tip-box-custom input{
+    text-align: center;
+    width: 5em;
+    height: 1.8em;
+    color: var(--dark-grayish-cyan);
+    text-align: center;
+    border-radius: 2px;
+    border: none;
+    background-color: var(--very-light-cyan);
+    transition: .3s;
+}
+
+.tip-box-custom input[type=number]{
+    text-align: center;
+    padding-left: .3em;
+}
+
+.amount-display-grid{
+    display: grid;
+    grid-auto-flow: column;
+    vertical-align: middle;
+}
+
+.header-right-box{
+    margin-top: .8em;
+}
+
+.active-box{
+    background-color: #26c0ab; 
+    color: black;
+    transition: .5s;
+    padding-bottom: 5px;
+    border: 1px solid black;
+}
+
+.static-box{
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    padding-bottom: 0px;
+    transition: .5s;
+    border: 0px solid black;
+}
+
+#tip-total-num, #amount-total-num{
+    color: var(--primary-color);
+    font-weight: var(--fw-700);
+    font-size: 2em;
+    text-align: right;
+    float: right;
+    min-width: 3em;
+    max-width: 5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: block;
+    line-height: 1em; /* a */
+    max-height: 2em; /* a x number of line to show (ex : 2 line)  */
+}
+
+.reset-button{
+    width: 100%;
+    margin-top: 9.5em;
+    height: 2.5em;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--dark-cyan);
+    filter: opacity(10%);
+    transition: .3s;
+}
+
+.reset-button:hover{
+    filter: opacity(100%);
+    cursor: pointer;
+}
+
+
+
+
+
+@media (max-width: 48em) {
+    .main-box-grid{
+        grid-auto-flow: row;
+        justify-content: center;
+    }
+
+    .right-box{
+        margin-left: .5rem;
+        max-width: 95%;
+    }
+
+    .main-box{
+        width: 90vw;
+    }
+    
+    .reset-button{
+        margin-top: 2em;
+    }
+
+    .left-box{
+    padding: 1em;
+    width: 100%;
+}
+}
