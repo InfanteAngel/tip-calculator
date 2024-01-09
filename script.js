@@ -41,12 +41,15 @@ function calculateTip() {
     finalAmount.innerHTML = "$0.00";
     if(errorText.getAttribute("aria-hidden") == "true"){
       errorText.classList.remove("visually-hidden");
+      peopleBox.style.cssText = "border: 1.5px solid lightcoral";
       errorText.setAttribute("aria-hidden", "false");
     }
   }
   else if(isNumber(numPeople)){
-    if (errorText.getAttribute("aria-hidden") == "false")
+    if (errorText.getAttribute("aria-hidden") == "false"){
       errorText.classList.toggle("visually-hidden");
+      peopleBox.style.cssText = "border: none";
+    }
     errorText.setAttribute("aria-hidden", "true");
   }
 }

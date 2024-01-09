@@ -73,6 +73,7 @@
     float: right;
     padding-top: .4em;
     text-align: right;
+    
 }
 
 .right-header-text{
@@ -258,7 +259,6 @@ main{
 
 #bill-input::placeholder, #num-people::placeholder{
     float: right;
-    margin-right: 1em;
 }
 
 input[type=text]{
