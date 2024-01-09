@@ -337,7 +337,6 @@ input[type=text]{
     color: black;
     transition: .5s;
     padding-bottom: 5px;
-    border: 1px solid black;
 }
 
 .static-box{
