@@ -297,10 +297,18 @@ input[type=text]{
 
 
 
-.tip-box:hover, .tip-box-custom input:hover{
+.tip-box:hover{
     cursor: pointer;
     background-color: var(--primary-color);
     color: var(--dark-cyan);
+}
+
+.tip-box-custom input:hover{
+    border: 1.5px solid var(--primary-color);
+}
+
+.tip-box:active{
+    border: 1.5px solid var(--primary-color);
 }
 
 

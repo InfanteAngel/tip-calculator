@@ -78,6 +78,7 @@ function customSelected() {
     tipBoxList[i].classList.remove("active-box");
     tipBoxList[i].classList.toggle("static-box");
     selectedPercentage = 0;
+    customBox.style.cssText = "border: 1.5px solid var(--primary-color)";
   }
 }
 
