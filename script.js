@@ -132,3 +132,28 @@ function resetAll() {
   location.reload();
 }
 resetButton.addEventListener("click", resetAll);
+
+
+billBox.addEventListener("keydown", function (e) {
+  if (e.code === "Enter") {
+    e.preventDefault();
+    calculateTip();
+  }
+});
+
+customBox.addEventListener("keydown", function (e) {
+  if (e.code === "Enter") {
+    e.preventDefault();
+    const customTip = document.getElementById("custom").value;
+    myPercentage = customTip / 100;
+    console.log(myPercentage);
+    calculateTip();
+  }
+});
+
+peopleBox.addEventListener("keydown", function (e) {
+  if (e.code === "Enter") {
+    e.preventDefault();
+    calculateTip();
+  }
+});
